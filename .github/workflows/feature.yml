@@ -1,0 +1,11 @@
+name: feature
+on:
+  pull_request:
+    types: [opened, synchronize, edited]
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'running'
