@@ -4,14 +4,9 @@ on:
     types: [opened, synchronize, edited]
     branches:
       - main
-  workflow_run:
-    workflows: ["main"]
-    branches: [main]
-    types:
-      - completed
 jobs:
   build:
-    if: ${{ github.ref != 'refs/heads/main' }}
+    # if: ${{ github.ref != 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo 'running'
