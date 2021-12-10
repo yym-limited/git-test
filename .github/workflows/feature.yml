@@ -4,9 +4,11 @@ on:
     types: [opened, synchronize, edited]
     branches:
       - main
-  push:
-    branches:
-      - main      
+  workflow_run:
+    workflows: ["main"]
+    branches: [main]
+    types:
+      - completed
 jobs:
   build:
     if: ${{ github.ref != 'refs/heads/main' }}
