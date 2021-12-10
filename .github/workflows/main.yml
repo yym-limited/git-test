@@ -1,7 +1,6 @@
-name: feature
+name: main
 on:
-  pull_request:
-    types: [opened, synchronize, edited]
+  push:
     branches:
       - main
 jobs:
