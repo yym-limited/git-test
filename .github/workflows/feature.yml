@@ -4,8 +4,12 @@ on:
     types: [opened, synchronize, edited]
     branches:
       - main
+  push:
+    branches:
+      - main      
 jobs:
   build:
+    if: ${{ github.ref != 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo 'running'
