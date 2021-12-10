@@ -4,6 +4,8 @@ on:
     types: [opened, synchronize, edited]
     branches:
       - main
+  issue_comment:
+    types: [created]      
 jobs:
   build:
     # if: ${{ github.ref != 'refs/heads/main' }}
