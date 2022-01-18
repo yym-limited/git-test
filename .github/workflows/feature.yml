@@ -12,19 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'running'
-      # - name: Start deployment
-      #   uses: avakar/create-deployment@v1
-      #   with:
-      #     auto_merge: true
-      #     environment: development
-      #     ref: ${{ github.head_ref }}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
       - name: Start deployment
-        uses: bobheadxi/deployments@v0.6.1
-        id: deployment
+        uses: avakar/create-deployment@v1
         with:
-          step: start
-          token: ${{ secrets.TOKEN }}
+          auto_merge: true
+          environment: development
           ref: ${{ github.head_ref }}
-          env: development
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      # - name: Start deployment
+      #   uses: bobheadxi/deployments@v0.6.1
+      #   id: deployment
+      #   with:
+      #     step: start
+      #     token: ${{ secrets.TOKEN }}
+      #     ref: ${{ github.head_ref }}
+      #     env: development
