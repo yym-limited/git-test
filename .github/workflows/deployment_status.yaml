@@ -14,5 +14,4 @@ jobs:
           echo ${{ github.event.deployment.environment }}
           echo ${{ github.event.deployment.ref }}
           echo ${{ github.event.deployment.sha }}
-          echo ${{ github.event.deployment_status.status }}
-          
+          echo ${{ github.event.deployment_status.state }}
