@@ -19,6 +19,7 @@ jobs:
           environment: development
           ref: ${{ github.head_ref }}
           required_contexts: ""
+          payload: '{"slack_url":"https://webhook.com/dev"}'
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
