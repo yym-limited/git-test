@@ -13,7 +13,7 @@ jobs:
     steps:
       - run: echo 'running'
       - name: Start deployment
-      - uses: avakar/create-deployment@v1
+        uses: avakar/create-deployment@v1
         with:
           auto_merge: true
           environment: development
