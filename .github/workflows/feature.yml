@@ -18,6 +18,7 @@ jobs:
           auto_merge: false
           environment: development
           ref: ${{ github.head_ref }}
+          required_contexts: ""
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
       # - name: Start deployment
